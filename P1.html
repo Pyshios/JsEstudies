@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<style>
+
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+</style>
+
+
+<div class="vertical-center">
+          
+       
+    <p>Click the button to change the collor of the page.</p>
+    <body style="background-color:rgb(255, 255, 255);"></body>
+    <button onclick="displayDate()">Change the color</button>
+    <p id="demo"></p>
+    
+</div>
+
+<script>
+var x = document.getElementsByTagName("body")[0] ;
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+function displayDate() {
+  
+  x.style["background-color"] = getRandomColor(); 
+  
+}
+
+
+</script>
+
+
+
+</body>
+</html> 
